@@ -1,0 +1,92 @@
+@import "colors";
+
+.cart {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  > main {
+    overflow-y: auto;
+    padding: 2rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    > h1 {
+      color: $tertiary;
+    }
+  }
+  > aside {
+    border-radius: 100px 0 0 100px;
+    background-color: $primary;
+    color: $tertiary;
+    height: 100%;
+    width: 100%;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.182);
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    > h2 {
+      font: 100 1.8rem "Roboto";
+      letter-spacing: 2px;
+      margin: 1rem;
+      &:last-child {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.cart-item {
+  background-color: $tertiary;
+  width: 100%;
+  border-radius: 10px;
+  margin: 2rem 0;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr;
+  align-items: center;
+  > img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    margin-right: 1rem;
+  }
+  > div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+    > button {
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      border: none;
+      border-radius: 5px;
+      background-color: $primary;
+      opacity: 0.9;
+      font-size: 1.4rem;
+      color: $tertiary;
+      transition: all 0.4s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    > p {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+    }
+  }
+  > svg {
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: grid;
+    place-self: center;
+    &:hover {
+      color: $secondarydark;
+    }
+  }
+}
