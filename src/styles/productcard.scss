@@ -11,6 +11,9 @@
   width: 200px;
   border-radius: 5px;
   transition: transform 0.3s;
+  > p {
+    text-align: center;
+  }
   > img {
     width: 120px;
     height: 120px;
